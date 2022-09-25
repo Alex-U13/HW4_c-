@@ -19,9 +19,10 @@ double S = Convert.ToDouble(Console.ReadLine());
 // Console.WriteLine(result);
 
 double result = N;          // - третий вариант, с использованием цикла for
-for (double i =1; i<=S; i++)
+for (double i =1; i<S; i++)
 {
-    result = Math.Pow(N,i);
+   // result = Math.Pow(N,i);
+    result = result*N; 
 }
 
 Console.WriteLine(result);
