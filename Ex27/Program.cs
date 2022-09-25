@@ -20,7 +20,7 @@ double b = Convert.ToDouble(count);
 double Summ = 0;
 for (int i = 0; i<count; i++)
 {
-    Array[i] = Math.Round((num / Math.Pow(10,(b-1))),0);
+    Array[i] = Math.Truncate(num / Math.Pow(10,(b-1)));
     // Console.Write($"{Array[i]} "); // проверка значений массива, на этом этапе возникают иногда ошибки. Например, если ввести 452, первое значение почему-то - 5.
     num = Convert.ToInt32(Math.Round((num % Math.Pow(10,(b-1))),0));
     // Console.Write($"{num} - остаток от деления. ");   // доп.проверка корректности остатка от деления
@@ -29,6 +29,3 @@ for (int i = 0; i<count; i++)
 }
 
 Console.WriteLine($"Результат суммирования {Summ}");
-
-
-
